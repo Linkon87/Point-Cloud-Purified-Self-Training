@@ -1,0 +1,19 @@
+DATALOADER:
+  batch_size: 32
+  num_workers: 0
+EXP:
+  DATASET: modelnet40_diffusion
+  EXP_ID: pointnet_cls_ae_diffusion_step_1
+  LOSS_NAME: smooth
+  METRIC: acc
+  MODEL_NAME: pointnet
+  SEED: 1
+  TASK: cls_trans
+  OPTIMIZER: step
+TRAIN:
+  l2: 1e-4
+AE:
+  IS: true
+  encoder: 'pointnet'
+  decoder: 'diffusion'
+  

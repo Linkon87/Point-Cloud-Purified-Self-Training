@@ -1,0 +1,26 @@
+DATALOADER:
+  batch_size: 16
+  num_workers: 0
+
+EXP:
+  DATASET: ScanObjectNN_diffusion
+  EXP_ID: pointnet2_pgdl2-latent_ScanObjectNN_diffusion
+  LOSS_NAME: smooth
+  METRIC: acc
+  MODEL_NAME: pointnet2
+  SEED: 1
+  TASK: cls
+TRAIN:
+  l2: 1e-4
+AE:
+  IS: True
+  truncate: True
+  encoder: 'pointnet'
+  decoder: 'diffusion'
+  t: 10
+ATTACK:
+  METHOD: 'pgd'
+  ITER: 200
+  LOSS: 'feature'
+  EPS: 1.25
+  NORM: 2.

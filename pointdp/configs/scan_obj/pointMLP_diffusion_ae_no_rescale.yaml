@@ -1,0 +1,19 @@
+DATALOADER:
+  batch_size: 128
+  num_workers: 0
+EXP:
+  DATASET: ScanObjectNN_diffusion
+  EXP_ID: pointmlp_ae_ScanObjectNN_diffusion_no_scale
+  LOSS_NAME: mse
+  LOSS_NAME: mse
+  METRIC: chamfer
+  MODEL_NAME: pointMLP
+  SEED: 1
+  TASK: diffusion
+  OPTIMIZER: diffusion
+TRAIN:
+  l2: 0.
+AE:
+  IS: true
+  encoder: 'pointnet'
+  decoder: 'diffusion'

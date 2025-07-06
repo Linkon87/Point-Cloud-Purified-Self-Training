@@ -1,0 +1,21 @@
+DATALOADER:
+  batch_size: 32
+  num_workers: 0
+  MODELNET40_CUSTOMIZED:
+    data_path: output/ONet-Opt/onet_opt-advpc_dgcnn_pgd_l2_1.npz
+EXP:
+  DATASET: modelnet40_customized
+  EXP_ID: dgcnn_pgd_l2_1
+  LOSS_NAME: smooth
+  METRIC: acc
+  MODEL_NAME: dgcnn
+  SEED: 1
+  TASK: cls
+TRAIN:
+  l2: 1e-4
+AE:
+  IS: False
+# ATTACK:
+#   METHOD: 'pgd'
+#   ITER: 200
+#   EPS: 0.05

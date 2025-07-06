@@ -1,0 +1,20 @@
+DATALOADER:
+  batch_size: 128
+  num_workers: 0
+EXP:
+  DATASET: modelnet40_diffusion
+  EXP_ID: pointnet2_ae_diffusion_run_1
+  LOSS_NAME: mse
+  LOSS_NAME: mse
+  METRIC: chamfer
+  MODEL_NAME: pointnet2
+  SEED: 2
+  TASK: diffusion
+  OPTIMIZER: diffusion
+TRAIN:
+  l2: 0.
+AE:
+  IS: true
+  encoder: 'pointnet'
+  decoder: 'diffusion'
+

@@ -1,0 +1,20 @@
+DATALOADER:
+  batch_size: 128
+  num_workers: 0
+EXP:
+  DATASET: modelnet40_dgcnn
+  EXP_ID: advpc_pointnet_pgd_l2_1
+  LOSS_NAME: smooth
+  METRIC: acc
+  MODEL_NAME: pointnet
+  SEED: 1
+  TASK: cls
+TRAIN:
+  l2: 1e-4
+AE:
+  IS: False
+ATTACK:
+  METHOD: 'advpc'
+  ITER: 200
+  EPS: 1.25
+  NORM: 2.

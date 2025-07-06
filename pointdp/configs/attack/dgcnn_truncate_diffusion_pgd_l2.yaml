@@ -1,0 +1,25 @@
+DATALOADER:
+  batch_size: 32
+  num_workers: 0
+EXP:
+  DATASET: modelnet40_diffusion
+  EXP_ID: dgcnn_truncate_diffusion_pgd_l2_1
+  LOSS_NAME: smooth
+  METRIC: acc
+  MODEL_NAME: dgcnn
+  SEED: 1
+  TASK: cls
+TRAIN:
+  l2: 1e-4
+AE:
+  IS: true
+  encoder: 'pointnet'
+  decoder: 'diffusion'
+  truncate: true
+  t: 10
+ATTACK:
+  METHOD: 'pgd'
+  ITER: 200
+  LOSS: 'feature'
+  EPS: 1.25
+  NORM: 2.

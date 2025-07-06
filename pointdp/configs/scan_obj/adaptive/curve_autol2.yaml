@@ -1,0 +1,25 @@
+DATALOADER:
+  batch_size: 64
+  num_workers: 0
+
+EXP:
+  DATASET: ScanObjectNN_diffusion
+  EXP_ID: curvenet_autol2_latent_ScanObjectNN_diffusion
+  LOSS_NAME: smooth
+  METRIC: acc
+  MODEL_NAME: curvenet
+  SEED: 1
+  TASK: non_adaptive_attack_cls
+TRAIN:
+  l2: 1e-4
+AE:
+  IS: True
+  truncate: True
+  encoder: 'pointnet'
+  decoder: 'diffusion'
+  t: 35
+ATTACK:
+  METHOD: 'apgd'
+  ITER: 200
+  EPS: 1.25
+  NORM: 2.

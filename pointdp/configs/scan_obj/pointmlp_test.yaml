@@ -1,0 +1,11 @@
+DATALOADER:
+  batch_size: 32
+  num_workers: 4
+EXP:
+  DATASET: ScanObjectNN
+  EXP_ID: pointMLP_ScanObjectNN
+  LOSS_NAME: smooth
+  MODEL_NAME: pointMLP
+  SEED: 0
+  TASK: cls
+

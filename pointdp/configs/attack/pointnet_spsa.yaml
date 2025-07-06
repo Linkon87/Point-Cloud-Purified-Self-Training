@@ -1,0 +1,22 @@
+DATALOADER:
+  batch_size: 128
+  num_workers: 0
+EXP:
+  DATASET: modelnet40_dgcnn
+  EXP_ID: pointnet_spsa_linf_1
+  LOSS_NAME: smooth
+  METRIC: acc
+  MODEL_NAME: pointnet
+  SEED: 1
+  TASK: cls_trans
+TRAIN:
+  l2: 1e-4
+AE:
+  IS: True
+  encoder: 'pointnet'
+  decoder: 'diffusion'
+  truncate: True
+  t: 10
+ATTACK:
+  METHOD: 'spsa'
+  ITER: 100

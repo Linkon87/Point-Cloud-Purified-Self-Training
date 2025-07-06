@@ -1,0 +1,20 @@
+AE:
+  IS: true
+  decoder: diffusion
+  encoder: pointnet
+  t: 35
+  truncate: true
+DATALOADER:
+  batch_size: 32
+  num_workers: 0
+EXP:
+  DATASET: ScanObjectNN_diffusion
+  EXP_ID: pct_cls_ae_diffusion_scanobjectnn
+  LOSS_NAME: smooth
+  METRIC: acc
+  MODEL_NAME: pct
+  SEED: 1
+  TASK: cls
+
+TRAIN:
+  l2: 1e-4

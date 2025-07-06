@@ -1,0 +1,24 @@
+DATALOADER:
+  batch_size: 64
+  num_workers: 0
+EXP:
+  DATASET: modelnet40_diffusion
+  EXP_ID: non_adaptive_curvenet_truncated_diffusion_knn_l2_1
+  LOSS_NAME: smooth
+  METRIC: acc
+  MODEL_NAME: curvenet
+  SEED: 1
+  TASK: non_adaptive_attack_cls
+TRAIN:
+  l2: 1e-4
+AE:
+  IS: True
+  truncate: True
+  encoder: 'pointnet'
+  decoder: 'diffusion'
+  t: 30
+ATTACK:
+  METHOD: 'knn'
+  ITER: 200
+  EPS: 1.25
+  NORM: 2.

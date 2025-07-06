@@ -1,0 +1,24 @@
+DATALOADER:
+  batch_size: 32
+  num_workers: 0
+EXP:
+  DATASET: ScanObjectNN_diffusion
+  EXP_ID: non_adaptive_pointMLP_diffusion_pgd_l2_ScanObjectNN_diffusion
+  LOSS_NAME: smooth
+  METRIC: acc
+  MODEL_NAME: pointMLP
+  SEED: 1
+  TASK: non_adaptive_attack_cls
+TRAIN:
+  l2: 1e-4
+AE:
+  IS: true
+  truncate: True
+  encoder: 'pointnet'
+  decoder: 'diffusion'
+  t: 30
+ATTACK:
+  METHOD: 'pgd'
+  ITER: 200
+  EPS: 1.25
+  NORM: 2.

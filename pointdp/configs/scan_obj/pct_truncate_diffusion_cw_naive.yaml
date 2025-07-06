@@ -1,0 +1,24 @@
+DATALOADER:
+  batch_size: 32
+  num_workers: 0
+
+EXP:
+  DATASET: ScanObjectNN_diffusion
+  EXP_ID: non_adaptive_pct_diffusion_cw_ScanObjectNN_diffusion
+  LOSS_NAME: smooth
+  METRIC: acc
+  MODEL_NAME: pct
+  SEED: 1
+  TASK: non_adaptive_attack_cls
+TRAIN:
+  l2: 1e-4
+AE:
+  IS: True
+  truncate: True
+  encoder: 'pointnet'
+  decoder: 'diffusion'
+  t: 35
+ATTACK:
+  METHOD: 'cw'
+  ITER: 500
+  EPS: 0.05

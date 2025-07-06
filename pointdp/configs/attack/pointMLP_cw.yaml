@@ -1,0 +1,19 @@
+DATALOADER:
+  batch_size: 32
+  num_workers: 0
+EXP:
+  DATASET: modelnet40_dgcnn
+  EXP_ID: pointMLP_cw_l2_1
+  LOSS_NAME: smooth
+  METRIC: acc
+  MODEL_NAME: pointMLP
+  SEED: 1
+  TASK: cls
+TRAIN:
+  l2: 1e-4
+AE:
+  IS: False
+ATTACK:
+  METHOD: 'cw'
+  ITER: 500
+  NORM: 2.

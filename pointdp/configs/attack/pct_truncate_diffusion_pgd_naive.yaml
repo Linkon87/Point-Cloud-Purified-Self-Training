@@ -1,0 +1,23 @@
+AE:
+  IS: true
+  decoder: diffusion
+  encoder: pointnet
+  t: 50
+  truncate: true
+ATTACK:
+  EPS: 0.05
+  ITER: 200
+  METHOD: pgd
+DATALOADER:
+  batch_size: 16
+  num_workers: 0
+EXP:
+  DATASET: modelnet40_diffusion
+  EXP_ID: non_adaptive_pct_truncated_diffusion_pgd_linf_1
+  LOSS_NAME: smooth
+  METRIC: acc
+  MODEL_NAME: pct
+  SEED: 1
+  TASK: non_adaptive_attack_cls
+TRAIN:
+  l2: 1e-4

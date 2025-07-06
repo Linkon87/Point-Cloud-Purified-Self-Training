@@ -1,0 +1,15 @@
+DATALOADER:
+  batch_size: 128
+  num_workers: 0
+EXP:
+  DATASET: modelnet40_diffusion
+  EXP_ID: point_ae_1
+  LOSS_NAME: mse
+  LOSS_NAME: mse
+  METRIC: chamfer
+  MODEL_NAME: pointnetae
+  SEED: 1
+  TASK: advpc
+  OPTIMIZER: diffusion
+TRAIN:
+  l2: 0.

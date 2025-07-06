@@ -1,0 +1,25 @@
+DATALOADER:
+  batch_size: 32
+  num_workers: 0
+  MODELNET40_CUSTOMIZED:
+    data_path: output/non_adaptive_dgcnn_truncate_diffusion_add_linf_1.npz
+EXP:
+  DATASET: modelnet40_customized_diffusion
+  EXP_ID: dgcnn_pgd_linf_1
+  LOSS_NAME: smooth
+  METRIC: acc
+  MODEL_NAME: dgcnn
+  SEED: 1
+  TASK: cls
+TRAIN:
+  l2: 1e-4
+AE:
+  IS: True
+  truncate: True
+  encoder: 'pointnet'
+  decoder: 'diffusion'
+  t: 30
+ATTACK:
+  METHOD: 'pgd'
+  ITER: 200
+  EPS: 0.05

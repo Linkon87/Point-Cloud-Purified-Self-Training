@@ -1,0 +1,21 @@
+DATALOADER:
+  batch_size: 32
+  num_workers: 0
+  MODELNET40_CUSTOMIZED:
+    data_path: output/ConvONet-Opt/convonet_opt-pct_pgd_linf_1.npz
+EXP:
+  DATASET: modelnet40_customized
+  EXP_ID: pct_pgd_linf_1
+  LOSS_NAME: smooth
+  METRIC: acc
+  MODEL_NAME: pct
+  SEED: 1
+  TASK: cls
+TRAIN:
+  l2: 1e-4
+AE:
+  IS: False
+ATTACK:
+  METHOD: 'pgd'
+  ITER: 200
+  EPS: 0.05

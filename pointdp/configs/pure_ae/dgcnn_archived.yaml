@@ -1,0 +1,17 @@
+DATALOADER:
+  batch_size: 32
+  num_workers: 0
+EXP:
+  DATASET: modelnet40_dgcnn
+  EXP_ID: dgcnn_ae_pgd_run_1
+  LOSS_NAME: chamfer
+  METRIC: chamfer
+  MODEL_NAME: dgcnn
+  SEED: 1
+  TASK: ae
+TRAIN:
+  l2: 1e-4
+AE: True
+AUG:
+  NAME: pgd
+
